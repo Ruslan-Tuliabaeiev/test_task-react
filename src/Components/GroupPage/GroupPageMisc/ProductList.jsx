@@ -9,14 +9,8 @@ const ProductList = ({ product, onDelete }) => {
   return (
     <li key={product.id} className="h-[70px] flex items-center bg-white gap-5 border-y-2 divide-slate-300">
       <h2 className="ml-7">{product.name}</h2>
-      {/* <div className="ml-7 w-[90px] flex flex-col">
-        <p>{t('price')}: ${product.price}</p>
-        <p>{t('price')}: ₴{product.price * 40}</p>
-      </div> */}
       <p className="max-w-[300px] text-start">{t('description')}: {product.description}</p>
       <div className="ml-auto mr-14 flex">  
-        {/* <p className="pr-10">{t('quantity')}: {product.quantity}</p>  */}
-        {/* <p className="ml-auto pr-[50px]">{t('createdAt')}: {product.createdAt}</p> */}
         <button 
           className="flex items-center gap-2"
           onClick={() => onDelete(product.id)}>
@@ -37,7 +31,7 @@ ProductList.propTypes = {
     createdAt: PropTypes.string.isRequired,
     quantity: PropTypes.number,
   }).isRequired,
-  onDelete: PropTypes.func.isRequired,
+  onDelete: PropTypes.func,
 };
 
 export default ProductList;

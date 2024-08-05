@@ -14,6 +14,7 @@ export const ComePage = () => {
     const [selectedProduct, setSelectedProduct] = useState(null);
     const [loading, setLoading] = useState(true);
     const [data, setData] = useState(null);
+    const [searchQuery, setSearchQuery] = useState('');
 
     const [comeProducts, setComeProducts] = useState([
         { id: 1, name: 'very very long name Product 1', price: 10, quantity: 45, createdAt: new Date().toLocaleDateString() },
@@ -37,10 +38,6 @@ export const ComePage = () => {
         { id: 8, name: 'Product 8', price: 202, description: 'Description Description Description Description 2', quantity: 7, createdAt: new Date().toLocaleDateString() },
       ]);
 
-    //   const handleDelete = (id) => {
-    //       setProducts(products.filter(product => product.id !== id));
-    //       closeModal();
-    //   };
     const handleDelete = (id, type) => {
         if (type === 'products') {
             setProducts(products.filter(product => product.id !== id));
@@ -69,6 +66,14 @@ export const ComePage = () => {
         setComeProductsOpen(prevState => !prevState);
     };
 
+    const handleSearch = (event) => {
+        setSearchQuery(event.target.value);
+    };
+
+    const filteredProducts = products.filter(product =>
+        product.name.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+
        useEffect(() => {
           setTimeout(() => {
               setData({ message: 'Data loaded' });
@@ -81,18 +86,36 @@ export const ComePage = () => {
       }
 
     return (
-        <div className="h-[1200px] max-w-[1700px] ml-[250px] bg-slate-300">
+        <div
+         className="h-[1200px] max-w-[1700px] ml-[250px] bg-slate-300"
+         data-testid="come-page"
+         >
             <div className="">
                 <div  className="ml-[100px] flex gap-7 pt-[50px] ">
                     <p className="text-lg font-semibold text-black ">{t('come')} {t('products')} /</p>
 
-                    <p>{t('type')}: </p>
-                    <input className="rounded"></input>
-
-                    <p>{t('speciality')}: </p>
-                    <input className="rounded"></input>
+                    <p>{t('productName')}: </p>
+                    <input
+                        type="text"
+                        value={searchQuery}
+                        onChange={handleSearch}
+                        placeholder={t('searchproduct')}
+                        className="rounded border border-gray-300"
+                    />
                 </div>
             </div>
+            {searchQuery && (
+                <ul className="w-[400px] ml-[100px] mt-4">
+                    {filteredProducts.map(product => (
+                        <li key={product.id} className="p-4 bg-white rounded shadow mb-2">
+                            <h2 className="text-lg font-semibold">{product.name}</h2>
+                            <p>Price: ${product.price}</p>
+                            <p>Quantity: {product.quantity}</p>
+                            <p>Created At: {product.createdAt}</p>
+                        </li>
+                    ))}
+                </ul>
+            )}
 
             {!comeProductsOpen && ( 
                 <div

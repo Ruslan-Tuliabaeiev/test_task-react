@@ -200,6 +200,8 @@ const resources = {
       "come": "COME",
       "group": "GROUP",
       "products": "PRODUCTS",
+      "productName": "Product name",
+      "searchproduct": "Search products...",
       "using": "USING",
       "settings": "SETINGS",
       "type": "Type",
@@ -213,7 +215,6 @@ const resources = {
       "cancel": "Cancel",
       "deleteProduct": "Delete Product",
       "areYouSureDelete": "Are you sure you want to delete", 
-      "productName": "Product name",
       "toTheListParishes": "To the list of coming products",
     }
   },
@@ -226,6 +227,8 @@ const resources = {
       "come": "ПРИХОДИ",
       "group": "ГРУППИ",
       "products": "ПРОДУКТИ",
+      "productName": "Назва продукту",
+      "searchproduct": "Пошук продукту...",
       "using": "КОРИСТУВАЧИ",
       "settings": "НАЛАШТУВАННЯ",
       "type": "Tип",
@@ -239,7 +242,6 @@ const resources = {
       "cancel": "Скасувати",
       "deleteProduct": "Видалити продукт",
       "areYouSureDelete": "Ви впевнені, що хочете видалити",
-      "productName": "Назва продукту",
       "toTheListParishes": "До списку приходу продуктів",
     }
   }

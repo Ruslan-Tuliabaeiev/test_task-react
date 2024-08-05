@@ -17,7 +17,6 @@ export const Orders = ({ product, onDelete }) => {
         <p>{t('totalPrice')}: ${product.price * product.quantity}</p>
         <p>{t('totalPrice')}: ₴{product.price * product.quantity * 40}</p>
       </div>
-      {/* <p className="max-w-[300px] text-start">{t('description')}: {product.description}</p> */}
       <div className="ml-auto mr-14 flex">  
         <p className="pr-10">{t('quantity')}: {product.quantity}</p> 
         <p className="ml-auto pr-[50px]">{t('createdAt')}: {product.createdAt}</p>
@@ -37,7 +36,6 @@ Orders.propTypes = {
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
-    description: PropTypes.string.isRequired,
     createdAt: PropTypes.string.isRequired,
     quantity: PropTypes.number,
   }).isRequired,

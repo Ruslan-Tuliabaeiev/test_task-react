@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Loader } from "../Loader/Loader";
 //import { useTranslation } from "react-i18next";
 
 export const ProductsPage = () => {
     // const { t } = useTranslation();
+    const [loading, setLoading] = useState(true);
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setData({ message: 'Data loaded' });
+            setLoading(false);
+        }, 2000);
+    }, []);
+
+    if (loading) {
+        return <Loader />;
+    }
 
 
     return (

@@ -80,7 +80,7 @@ export const GroupPage = () => {
                      <div  onClick={toggleProductListModal}>
                          <ul className="max-w-[1300px] ml-[60px]">
                             {products.map(product => (
-                            <ProductItem key={product.id} product={product}  />
+                            <ProductItem key={product.id} product={product} />
                             ))}
                          </ul> 
                     </div>
@@ -99,7 +99,7 @@ export const GroupPage = () => {
                         </div>
                          <ul>
                             {productsList.map(product => (
-                            <ProductList key={product.id} product={product}  onDelete={() => openModal(product)}  />
+                            <ProductList key={product.id} product={product} onDelete={() => openModal(product)} />
                              ))}
                          </ul>
                     </div>
