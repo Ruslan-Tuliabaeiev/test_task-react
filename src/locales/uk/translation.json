@@ -1,0 +1,7 @@
+{
+    "invertory":"ІНВЕНТАРІЙ",
+    "today": "Сьогодні",
+    "welcome": "Ласкаво просимо",
+    "description": "Це приклад використання i18next у React-додатку.",
+    "Welcome to React": "Це приклад використання i18next у React-додатку."
+}

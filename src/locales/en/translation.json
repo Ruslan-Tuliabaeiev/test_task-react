@@ -1,0 +1,7 @@
+{
+    "invertory": "INVENTORY",
+    "today": "Today",
+     "welcome": "Welcome",
+  "description": "This is an example of using i18next in a React application.",
+  "Welcome to React": "Welcome to React and react-i18next"
+}
