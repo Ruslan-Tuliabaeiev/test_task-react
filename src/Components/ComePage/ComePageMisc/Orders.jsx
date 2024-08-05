@@ -18,6 +18,7 @@ export const Orders = ({ product, onDelete }) => {
         <p>{t('totalPrice')}: ₴{product.price * product.quantity * 40}</p>
       </div>
       <div className="ml-auto mr-14 flex">  
+      <p className="pr-10">{t('productType')}: {product.type}</p> 
         <p className="pr-10">{t('quantity')}: {product.quantity}</p> 
         <p className="ml-auto pr-[50px]">{t('createdAt')}: {product.createdAt}</p>
         <button 
@@ -35,6 +36,7 @@ Orders.propTypes = {
   product: PropTypes.shape({
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
     createdAt: PropTypes.string.isRequired,
     quantity: PropTypes.number,

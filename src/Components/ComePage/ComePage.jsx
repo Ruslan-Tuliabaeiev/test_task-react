@@ -81,7 +81,6 @@ export const ComePage = () => {
         return matchesQuery && matchesType;
     });
 
-
        useEffect(() => {
           setTimeout(() => {
               setData({ message: 'Data loaded' });
