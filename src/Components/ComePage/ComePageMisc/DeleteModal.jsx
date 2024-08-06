@@ -18,7 +18,7 @@ const DeleteModal = ({ isOpen, onClose, onConfirm, product }) => {
         <div
          id="modalBackground"
          onClick={handleClickOutside}
-         className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
+         className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center font-serif"
          >
 
             <div className="h-[200px] w-[650px] bg-white p-6 rounded shadow-lg  relative">

@@ -94,7 +94,7 @@ export const ComePage = () => {
 
     return (
         <div
-         className="h-[1200px] max-w-[1700px] ml-[250px] bg-slate-300"
+         className="h-[1200px] max-w-[1700px] ml-[250px] bg-slate-300 font-serif"
          data-testid="come-page"
          >
             <div className="">

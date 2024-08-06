@@ -70,7 +70,7 @@ export const GroupPage = () => {
 
 
     return (
-        <div className="h-[1200px] max-w-[1700px] ml-[250px] bg-slate-300">
+        <div className="h-[1200px] max-w-[1700px] ml-[250px] bg-slate-300 font-serif">
            
                 <div  className="ml-[100px] flex gap-7 pt-[50px]">
                 <p className="text-lg font-semibold text-black">{t('come')} {t('products')} /</p>
@@ -106,7 +106,7 @@ export const GroupPage = () => {
                 )}                
 
                </div>
-               <DeleteModal isOpen={isModalOpen} onClose={closeModal} onConfirm={confirmDelete} product={productsList} />
+               <DeleteModal isOpen={isModalOpen} onClose={closeModal} onConfirm={confirmDelete} product={selectedProduct} />
         </div>
     )
 }

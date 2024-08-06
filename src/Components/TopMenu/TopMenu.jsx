@@ -31,10 +31,10 @@ export const TopMenu = ({changeLanguage}) => {
           <div className="h-20 flex bg-white">
             <div className="ml-[150px] flex items-center">
                 <RuleFilled color="green" size={27} className="mr-1" />
-                <p className="text-lg font-semibold text-[green]">{t('invertory')}</p>
+                <p className="text-lg font-semibold font-serif text-[green]">{t('invertory')}</p>
             </div>
 
-            <div className="ml-[50px] flex items-center">
+            <div className="ml-[50px] flex items-center font-serif">
               <button
                 onClick={() => toggleLanguage('en')}
                 className={`px-3 py-1 rounded ${currentLanguage === 'en' ? 'bg-blue-500 text-white' : 'bg-gray-300 text-black'}`}
@@ -49,7 +49,7 @@ export const TopMenu = ({changeLanguage}) => {
               </button>
            </div>
 
-             <div className="mt-2 ml-auto mr-14 flex flex-col">
+             <div className="mt-2 ml-auto mr-14 flex flex-col font-serif">
                 <p className="">{t('today')}</p>
                   <p className="flex items-center gap-1">
                     {dateTime.toLocaleDateString()}

@@ -25,7 +25,7 @@ export const Sidebar = () => {
 
 
     return (
-        <div className="bg-gray-200 h-[1200px] absolute top-[80px] left-0 w-64 shadow-2xl">
+        <div className="bg-gray-200 h-[1200px] absolute top-[80px] left-0 w-64 shadow-2xl font-serif">
             <div className="relative">
                 <div className="h-[130px] w-[130px] ml-[60px] mt-8 bg-stone-500 rounded-full shadow-lg"></div>
                 <div className="absolute bottom-0 left-0 h-[60px] w-[60px] ml-[130px] mt-8 flex items-center justify-center bg-slate-400 rounded-full shadow-xl">
